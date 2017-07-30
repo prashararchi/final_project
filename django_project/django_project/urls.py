@@ -15,10 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from views import signup_view
-
+from views import signup_view,log_in,feed_back,log_out,homepage,like_post,comment_view
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^login/', log_in),
+    url(r'^feed/', feed_back),
+    url(r'^logout/', log_out),
+    url(r'^home/', homepage),
+    url(r'^like/', like_post),
+    url(r'^comment/', comment_view),
     url(r'^', signup_view),
 
 ]

@@ -1,20 +1,42 @@
+
 <!Doctype html>
 <html>
 	<head>
-		<meta charset="utf-8">
-    		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    		<meta name="viewport" content="width=device-width, initial-scale=1">		
+		
 
 		<title>Instagram Signup</title>
-		<!--Custom css file-->
-		<link rel="stylesheet" href="css/styles.css">
-		<!--Bootstrap css-->
-		<link rel="stylesheet" href="css/bootstrap.css">
+		<!-- font-->
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+	
+	<style>
+	body{
+	background-color:purple;
+    background: url('https://goo.gl/M9gEBm');
+  	background-size: cover;
+	color:white;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
+     }
+	 h1{font-family:'Pacifico', cursive;}
+	 .pad{
+	 padding-left: 20px;
+	 }
+	 .pad-2{
+	 margin-top: -43px;
+	 margin-left: 90px;
+	 }
+	</style>
 	</head>
-	<body>
+	<body>  
 		
 			<h1 align=center> Instagram Clone</h1>
 			<h3 align=center>Sign Up!!!</h3>
+			<h4 align=center>Username and Password must be atleast 5 characters!!!</h4>
+			<h4 align=center>{{invalid}}</h4>
+			<h5 align=center>{{invalid_username}}</h5>
+			<h5 align=center>{{invalid_pass}}</h5>
 	
 		
 		<div align=center>
@@ -23,7 +45,7 @@
 					<table>
 						<tr>
 							<td><label for="name">Name: </label></td>
-							<td><input type="text" id="name" name="Name" placeholder="          Name" value="{{name}}"></td>
+							<td><input type="text" id="name" name="name" placeholder="          Name" value="{{name}}"></td>
 						</tr>
 						<tr>
 							<td><label for="Username">User-name: </label></td>
@@ -39,17 +61,22 @@
 						</tr>
 						<tr>
 							<td></td>
-							<td><p  style="text-align: center;"><input class="btn btn-default" type="submit" value="Submit"></p></td>
-							
+
+							<td><p class="pad"><input class="btn btn-default" type="submit" value="Submit"></p></td>
 						</tr>
 					</table>
 		</form>
+			<table >
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><p class="pad pad-2" ><a href="/login"><input type="submit" value="login"></a></p></td>
+				</tr>
+			</table>
+
 		</div>
 
-		<!--Javascript files.-->
-		<!--Jquery library-->
-		<script src="js/javascript-3.2.1.js"></script>
-		<!--Bootstrap Javascript-->
-		<script src="js/bootstrap.js"></script>
+
 	</body>
 </html>
