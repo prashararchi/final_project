@@ -51,7 +51,8 @@ def log_in(request):
     if request.method == "GET" :
         #login = Log_in_Form()
         #dictionary['form'] = login
-        template_name = "log_in.html"
+        template_name = "login.html"
+
     elif request.method == "POST" :
         login = Log_in_Form(request.POST)
         if login.is_valid() :
@@ -69,14 +70,14 @@ def log_in(request):
                     return response
                 else :
                     dictionary['invalid'] = 'invalid Password..'
-                    template_name = "log_in.html"
+                    template_name = "login.html"
 
 
             else :
                 return redirect("/")
         else :
             dictionary['invalid_password'] = 'Invalid *User-name or *Password..'
-            template_name = "log_in.html"
+            template_name = "login.html"
 
     return render(request, template_name, dictionary)
 
